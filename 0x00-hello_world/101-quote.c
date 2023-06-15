@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <unistad.h>
+#include <unistd.h>
 
 /**
- * Descroption: main - A program in Unix.
+ * Description: main - A program in Unix.
  * Return: 1 if success.
  */
 int main(void)
