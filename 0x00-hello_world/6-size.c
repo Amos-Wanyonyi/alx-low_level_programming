@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Description: main - A program that prints various types on the computer it is run on.
+ * main - Entry point.
  * Return: 0 if success.
  */
 int main(void)
@@ -11,6 +11,5 @@ int main(void)
 	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %d byte(s)\n", sizeof(float));
-
 	return (0);
 }
