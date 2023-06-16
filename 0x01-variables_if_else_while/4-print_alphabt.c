@@ -9,16 +9,16 @@ int main(void)
 
 	while (lowerCase <= 'z')
 	{
-		if(lowerCase == 'e' || lowerCase == 'q')
+		if (lowerCase == 'e' || lowerCase == 'q')
 		{
 			lowerCase += 1;
 		}
 		else
 		{
-			putchar(lowerCase);
+			putchar (lowerCase);
 			lowerCase += 1;
 		}
 	}
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
