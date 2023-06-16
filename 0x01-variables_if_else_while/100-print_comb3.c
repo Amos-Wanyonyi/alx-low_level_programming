@@ -1,36 +1,28 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - function to print combination of two digit numbers
+ * main - entry point
  * Return: 0 if success
  */
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-
-	while (i <= '8')
-	{
-		while (j <= '9')
-		{
-			if (!(i > j) || i == j)
-			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			j++;
-		}
-		j = '0';
-		i++;
-	}
-return (0);
+    int d, p;
+    for (d = '0'; d < '9'; d++)
+    {
+        for (p = d + 1; p <= '9'; p++)
+        {
+            if (p != d)
+            {
+                putchar(d);
+                putchar(p);
+                if (d == '8' && p == '9')
+                continue;
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+    putchar('\n');
+    return (0);
 }
