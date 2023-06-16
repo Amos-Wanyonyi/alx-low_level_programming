@@ -1,17 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - entry point
  * Return: 0 if success
  */
 int main(void)
 {
-	int num;
+	int i;
 
-	while (num < 10)
-	{
-		printf("%d", num);
-		num += 1;
-	}
-	printf('\n');
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
+	        printf('\n');
+
 	return (0);
 }
