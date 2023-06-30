@@ -2,17 +2,23 @@
 /**
 * print_number - Prints an integer
 * @n: The integer to be printed
+* Return: no return
 */
 void print_number(int n)
 {
+unsigned int number;
+
+number = n;
+
 if (n < 0)
 {
 _putchar('-');
-n = -n;
+number = -n;
+}
+if (number / 10 != 0)
+{
+print_number(number / 10);
+}
+_putchar((number % 10) + '0');
 }
 
-if (n / 10 != 0)
-print_number(n / 10);
-
-_putchar('0' + (n % 10));
-}
