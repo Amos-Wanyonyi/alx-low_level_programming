@@ -4,7 +4,7 @@
 /**
  * main - minimum number of coins to make change for money
  * @argc: The number of arguments
- * @argv: Array reps commandline arg
+ * @argv: Array representing commandline arguments
  * Return: 0 is success, 1 if error
  */
 
