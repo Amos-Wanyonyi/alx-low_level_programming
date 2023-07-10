@@ -24,6 +24,6 @@ char *_strdup(char *str)
 	ptr = ret;
 	while (*str)
 		*ptr++ = *str++;
-	*ptr = 0;
+	*ptr = '\0';
 	return (ret);
 }
