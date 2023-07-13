@@ -5,7 +5,7 @@
 * main - multiplies two digit numbers
 * @argc: the number of argcuments in a command line
 * @argv: an array containing the arguments
-* Return: always 0
+* Return: 0 if success
 */
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
+			if (argv[i][j] > 57 || argv[i][j] < 48)
 			{
 				printf("Error\n");
 				exit(98);
