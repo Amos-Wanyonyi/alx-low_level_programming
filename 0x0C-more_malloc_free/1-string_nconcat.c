@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 /**
 * string_nconcat - concatenates two strings
@@ -12,35 +11,35 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
-	
+	char *nstr, *empt;
+	unsigned int i, len, j;
+	unsigned int size;
+
+	len = 0;
+	empt = "";
 	if (s1 == NULL)
-		s1 = "";
+		s1 = empt;
 	if (s2 == NULL)
-		s2 = "";
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
-	if (n >= size2)
-	{
-		n = size2;
-	}
-	p = malloc((size1 + n + 1) * sizeof(char));
-	if (p == NULL)
+		s2 = empt;
+	while (s1[len] != '\0')
+		len++;
+	size = (len + n) * sizeof(*nstr);
+	nstr = malloc(size + 1);
+	if (nstr == NULL)
 		return (NULL);
-	for (i = 0; i < size1; i++)
+	i = 0;
+	while (i < size && s1[i] != '\0')
 	{
-		p[i] = s1[i];
+		nstr[i] = s1[i];
+		i++;
 	}
-	for (; i < (size1 + n); i++)
+	j = 0;
+	while (i < size && s2[j] != '\0')
 	{
-		p[i] = s2[i - size1];
+		nstr[i] = s2[j];
+		i++;
+		j++;
 	}
-	return (p);
+	nstr[i] = '\0';
+	return (nstr);
 }
