@@ -7,22 +7,20 @@
 */
 int sum_them_all(const unsigned int n, ...)
 {
-va_list args;
+va_list list;
 int sum;
-unsignedint i;
+unsigned int i;
 int num;
 
-va_start(args, n);
-if (n == 0)
+if (n)
 {
-va_end(args);
-return (0);
-}
+va_start(list, n);
 for (i = 0; i < n; i++)
 {
-num = va_arg(args, int);
+num = va_arg(list, int);
 sum += num;
 }
-va_end(args);
+va_end(list);
+}
 return (sum);
 }
