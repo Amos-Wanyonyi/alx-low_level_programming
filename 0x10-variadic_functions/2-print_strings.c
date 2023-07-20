@@ -8,19 +8,19 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list list1;
-	char *str;
 	unsigned int i;
+	char *clone;
 
 	va_start(list1, n);
 
 	for (i = 0; i < n; i++)
 	{
-		str = va_arg(list1, char*);
-		if (str == NULL)
-			printf("nil");
+		clone = va_arg(list1, char*);
+		if (clone != NULL)
+			printf("%s", clone);
 		else
-			printf("%s", str);
-		if (i < n - 1 && separator != NULL)
+			printf("%p", clone);
+		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 	}
 	printf("\n");
