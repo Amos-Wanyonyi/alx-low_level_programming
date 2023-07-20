@@ -7,22 +7,22 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list list1;
+	va_list list;
 	unsigned int i;
-	char *clone;
+	char *str;
 
-	va_start(list1, n);
+	va_start(list, n);
 
 	for (i = 0; i < n; i++)
 	{
-		clone = va_arg(list1, char*);
-		if (clone != NULL)
-			printf("%s", clone);
+		str = va_arg(list, char*);
+		if (str != NULL)
+			printf("%s", str);
 		else
-			printf("%p", clone);
+			printf("%p", str);
 		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(list1);
+	va_end(list);
 }
