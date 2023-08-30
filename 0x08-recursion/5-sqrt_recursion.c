@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * comparar - returns the power of a function
+ * square_root - returns the power of a function
  * @n: The original number
  * @y: counter to compare multiplication
  * Return: the square root
  */
-int comparar(int n, int y)
+int square_root(int n, int y)
 {
 	if (y * y == n)
 	{
@@ -17,7 +17,7 @@ int comparar(int n, int y)
 	}
 	else
 	{
-		return (comparar(n, y + 1));
+		return (square_root(n, y + 1));
 	}
 }
 
@@ -28,5 +28,5 @@ int comparar(int n, int y)
  */
 int _sqrt_recursion(int n)
 {
-	return (comparar(n, 1));
+	return (square_root(n, 1));
 }
