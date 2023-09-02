@@ -8,7 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
-int change = 0, n = 0;
+int change = 0, n;
 
 if (argc != 2)
 {
