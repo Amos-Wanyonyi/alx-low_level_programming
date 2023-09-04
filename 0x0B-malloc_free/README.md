@@ -1,0 +1,1 @@
+A readme file about malloc and free. Here we learn to use malloc to allocate memory space because we may not know the exact amount required to help run our programs. We also have to deallocate the creacted memory spaces using free because malloc is not like other varables that free's themselves
