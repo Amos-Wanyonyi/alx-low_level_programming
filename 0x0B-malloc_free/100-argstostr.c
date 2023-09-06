@@ -40,7 +40,6 @@ char *argstostr(int ac, char **av)
 		b = 0;
 		a++;
 	}
-	c++;
 	s[c] = '\0';
 	return (s);
 }
