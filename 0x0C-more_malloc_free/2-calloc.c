@@ -10,17 +10,19 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
 	unsigned int count;
+	unsigned int total;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	ptr = malloc(nmemb * size);
+	total = nmemb * size;
+	ptr = malloc(total);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	for (count = 0; count < nmemb * size; count++)
+	for (count = 0; count < total; count++)
 	{
 		ptr[count] = 0;
 	}
