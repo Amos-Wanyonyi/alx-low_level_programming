@@ -1,16 +1,12 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-
 #include <stdio.h>
-#define ABS(x) ((x < 0) ? (-x) : (x))
-void print_file_name()
+
+/**
+ * main - prints the name of the file
+ *
+ * Return: 0 if success
+ */
+int main(void)
 {
 	puts(__FILE__);
-}
-int main()
-{
-	print_file_name();
-
 	return (0);
 }
-#endif
