@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * free_list - frees the list_t list
  * @head: list_t list to be freed
@@ -13,7 +14,7 @@ void free_list(list_t *head)
 		temp = head->next;
 		free(head->str);
 		free(head);
-		next = temp;
+		head = temp;
 	}
 }
 
