@@ -6,15 +6,14 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int temp = n;
-	int shifts = 0;
+	unsigned long int temp;
+	int shifts;
 
 	if (n == 0)
 		return;
-	while (temp > 0)
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
 	{
-		temp >>= 1;
-		shifts++;
+		;
 	}
 	for (; shifts >= 0; shifts--)
 	{
